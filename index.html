@@ -1,98 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <mteta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="utf-8">
+    <mteta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>SeungYoon</title>
-    <!--스타일/-->
-    <link href="./style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        </head>
+        <!--스타일/-->
+        <link href="./style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script>
+            function removeClass(id) {
+                $('#' + id).removeClass('noDisplay');
+            }
+
+            function addClass(id) {
+                $('#' + id).addClass('noDisplay');
+            }
+        </script>
+
+</head>
+
 <body>
     <div class="nav">
         <div class="company-name">
             <a class="nav-name" href="https://lsy-0412.github.io/test/">이승윤</a>
         </div>
         <div class="nav-right-items">
-        <div class="nav-item">
-            <li class="nav-item"><a class="nav-link-active" href="https://lsy-0412.github.io/test/#home" target-menu="menu_home">Home</a></li>
-        </div>
-        <div class="nav-item">
-            <li class="nav-item"><a class="nav-link-active" href="https://lsy-0412.github.io/test/#about" target-menu="menu_about">About</a></li>
-        </div>
-        <div class="nav-item">
-            <li class="nav-item"><a class="nav-link-active" href="https://lsy-0412.github.io/test/#more" target-menu="menu_more">More</a></li>
-        </div>
-    </div>
-    </div>
-
-    <div class="container">
-
-        <div class="bs-docs-section">
-			<div class="menu_template" id="menu_home" style="display: none;">
-				<div class="row">
-					<div class="col-md-4">
-						<img src="./IMG_0906.JPG" width="100%">
-                    </div>
-					<div class="col-md-8">
-
-						<h5>RESEARCH INTEREST</h5>
-						<p>
-							I am a assistant professor in the <a href="https://cse.kangwon.ac.kr/" target="_blank">Department of Computer Science and Engineering</a> at <a href="https://www.kangwon.ac.kr/english/index.do" target="_blank">Kangwon national university</a>, South Korea.
-							I received the B.S. in computer science from University of Canterbury in 2011, the M.S. and Ph.D. degrees in knowledge service engineering from KAIST in 2014 and 2020, respectively. I continued my studies at KAIST as a post-doctoral research scientist (2020 Mar-Aug).
-							While my research interests span across various areas of Human-Computer Interaction (HCI) and Ubiquitous Computing, currently, I am focusing in "Understanding and Designing Human Interactions with Artificial Intelligence Systems".
-						</p>
-
-						<br>
-						<div class="ui labels" style="margin-top:15px">
-							<a class="ui label" href="mailto:kimauk@gmail.com" target="_blank">kimauk@gmail.com</a> |
-							<a class="ui label" href="https://docs.google.com/document/d/1pwR4VtFH5ifV_W_lMsAisfupnHwliurHJaziSi5mrFY/edit?usp=sharing" target="_blank">CV</a> |
-							<a class="ui label" href="https://scholar.google.co.kr/citations?user=sI0qT0MAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>
-						</div>
-					</div>
-				</div>
-			</div>
-         </div>
-
-            <div class="bs-docs-section">
-                <div class="menu_template" id="menu_about" style="">
-                    <p>* Google Scholar: <a href="https://scholar.google.co.kr/citations?user=sI0qT0MAAAAJ&amp;hl=en" target="_blank">https://scholar.google.co.kr/citations?user=sI0qT0MAAAAJ&amp;hl=en</a></p>
-    
-                    <br>
-                    <p> Corresponding Author +</p>
-                    <br>
-    
-                    <h5>2021</h5>
-                    <table class="table table-hover">
-                        <tbody>
-                            <tr>
-                                <td class="publication">
-                                    <a href="https://www.frontiersin.org/articles/10.3389/fpubh.2021.586615/full" target="_blank">
-                                        <span class="text-primary">"Benefits of Mobile Contact Tracing on COVID-19: Tracing Capacity Perspectives"</span></a>
-                                    <span style="float:right;">
-                                                        <a class="btn btn-outline-info btn-sm" href="https://www.frontiersin.org/articles/10.3389/fpubh.2021.586615/full" role="button" target="_blank">PDF</a>
-                                                    </span>
-                                    <br>
-                                    <em>Frontiers in Public Health (Digital Public Health Section) (Mar 2021)</em><br>
-                                    Uichin Lee +, <strong>Auk Kim</strong>.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="publication">
-                                    <a href="https://lsy-0412.github.io/test/" target="_blank">
-                                        <span class="text-primary">"Sticky Goals: Understanding Goal Commitments for Behavioral Changes in the Wild"</span></a>
-                                    <span style="float:right;">
-                                                        <a class="btn btn-outline-info btn-sm" href="https://lsy-0412.github.io/test/" role="button" target="_blank">PDF</a>
-                                                    </span>
-                                    <br>
-                                    <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’21)</em><br>
-                                    Hyunsoo Lee, <strong>Auk Kim +</strong>, Hwajung Hong +, Uichin Lee +.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="nav-item">
+                <li> <a href="https://lsy-0412.github.io/test/#home" onclick="removeClass('home'); addClass('about'); addClass('more');">Home</a></li>
             </div>
+            <div class="nav-item">
+                <li> <a href="https://lsy-0412.github.io/test/#about" onclick="removeClass('about'); addClass('home'); addClass('more');">about</a></li>
+            </div>
+            <div class="nav-item">
+                <li> <a href="https://lsy-0412.github.io/test/#more" onclick="removeClass('more'); addClass('home'); addClass('about');">more</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div id='home'>
+        <h1>page1</h1>
+    </div>
+    <div id='about' class="noDisplay">
+        <h1>page2</h1>
+    </div>
+    <div id='more' class="noDisplay">
+        <h1>page3</h1>
+    </div>
+
 </body>
+
 </html>
